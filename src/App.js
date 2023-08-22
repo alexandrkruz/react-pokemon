@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import ItemsList from "./components/ItemsList/ItemsList"
 
-function App() {
+export const App = () => {
+  let items = [
+    "HTC U Ultra",
+    "iPhone 7",
+    "Google Pixel",
+    "Hawei P9",
+    "Meizu Pro 6",
+    "Asus Zenfone 3",
+  ]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className="App">
+        <ItemsList title="Список смартфонов" items={items} />
+      </div>
+    </>
+  )
 }
-
-export default App;
