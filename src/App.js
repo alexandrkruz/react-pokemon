@@ -1,5 +1,6 @@
 import React from "react"
 import ItemsList from "./components/ItemsList/ItemsList"
+import CommentSection from "./components/commentSection/commentSection"; 
 
 const data = [
   {
@@ -68,12 +69,21 @@ export const App = () => {
     "Meizu Pro 6",
     "Asus Zenfone 3",
   ]
+  
+    return (
+      <>
+        <div className="App">
+          <ItemsList title="Список смартфонов" items={items} />
+          <CommentSection comments={data} /> 
+        </div>
+      </>
+    );
+  };
 
-  return (
-    <>
-      <div className="App">
-        <ItemsList title="Список смартфонов" items={items} />
-      </div>
-    </>
-  )
-}
+  
+  
+  
+  
+  
+  
+
